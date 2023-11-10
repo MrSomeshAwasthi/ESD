@@ -1,0 +1,122 @@
+body{
+    background-color:  #FCE38A;
+    border-radius: 20px;
+}
+
+.navbar-brand {
+    padding: 15px;
+    display: block; 
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    width: 110px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.navbar {   
+    background-color:#F38181;
+    color: white;
+}
+
+.search{
+    justify-content: space-between;
+}
+
+.nav-item{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-link{
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: black;
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px; 
+}
+
+.scrolling-wrapper {
+    display: flex;
+    white-space: nowrap;
+    margin: 5px;
+    background: white;
+    overflow: hidden;
+    object-fit:inherit;
+    border-radius: 10px;
+}
+.scrolling-wrapper{
+    display:flex;
+    white-space: nowrap;
+    margin: 5px;
+    background: white ;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card {
+    width: 100%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.show-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px; 
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
+
+.show-more:hover {
+    text-decoration: underline;
+}
+.product {
+    width: 50%;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h2,
+.product p {
+    margin: 10px;
+}
+.product button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
