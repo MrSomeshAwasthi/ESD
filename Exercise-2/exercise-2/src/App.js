@@ -12,16 +12,10 @@ function App() {
     <>
         <Navbar />
         <Routes>
-          <Route path="/Allproducts"
-            element={<Allproduct />}>
-          </Route>
-          <Route path="/Cart"
-          element={<Cart />}>
-            
-          </Route>
+        <Route path="/" element={<><Carousel /> <Bestseller /></>}/> 
+        <Route path="/Allproducts" element={<Allproduct />} />
+        <Route path="/Cart" element={<Cart />} />
         </Routes>
-        <Carousel />
-        <Bestseller />
         <Footer />
     </>
   );

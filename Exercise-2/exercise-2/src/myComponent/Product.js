@@ -6,7 +6,7 @@ const Product = ({ productsData }) => {
       <div className="row">
         {productsData.map((product) => (
           <div key={product.id} className="col-md-4 mb-4">
-            <div className="card">
+            <div className="card" style={{ border: '1px solid #000' }}>
               <img
                 src={product.imageSrc}
                 className="card-img-top"
