@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Puma baadal",
+        "imageSrc": "https://m.media-amazon.com/images/I/618F2QyUUEL._SX569_.jpg",
+        "material": "Cotton",
+        "color": "Blue",
+        "sizes": ["S","M","L","XL"],
+        "price": 5500
+    },
+    {
+        "id": 2,
+        "name": "Puma amawas",
+        "imageSrc": "https://images-na.ssl-images-amazon.com/images/I/71oSGl5w10L._AC_UL1500_.jpg",
+        "material": "Cotton",
+        "color": "Black",
+        "sizes": ["S","M","L","XL"],
+        "price": 3500
+    },
+    {
+        "id": 3,
+        "name": "Puma ash",
+        "imageSrc": "https://images.puma.net/images/586965/03/fnd/AUS/w/1000/h/1000/bg/255,255,255",
+        "material": "Cotton",
+        "color": "Assorted",
+        "sizes": ["S","M","L","XL"],
+        "price": 2500
+    }
+]
