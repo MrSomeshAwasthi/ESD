@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "src":"https://m.media-amazon.com/images/I/618F2QyUUEL._SX569_.jpg",
+        "alt":"Puma baadal"
+    },
+    {
+        "id": 2,
+        "src":"https://m.media-amazon.com/images/I/61vQYGLUnZL._SX466_.jpg",
+        "alt":"Puma blast"
+    },
+    {
+        "id": 3,
+        "src":"https://m.media-amazon.com/images/I/61Cb9iX+toL._AC_UL480_FMwebp_QL65_.jpg",
+        "alt":"Puma Nig"
+    },
+    {
+        "id": 4,
+        "src":"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/670963/43/fnd/IND/fmt/png/PUMA-Power-Colourblock-Hoodie-Youth",
+        "alt":"Puma advance"
+    }
+]

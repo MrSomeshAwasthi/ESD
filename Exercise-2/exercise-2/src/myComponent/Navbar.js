@@ -38,7 +38,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="profile.html">
+              <Link className="nav-link" to="/Profile">
                 Contact
               </Link>
             </li>
@@ -54,7 +54,7 @@ export default function Navbar() {
               </Link>
               <ul className="dropdown-menu dropdown-menu-end">
                 <li>
-                  <Link className="dropdown-item" to="profile.html">
+                  <Link className="dropdown-item" to="/Profile">
                     Profile Details
                   </Link>
                 </li>
