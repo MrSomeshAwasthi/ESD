@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -33,7 +39,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="cart.html">
+              <Link className="nav-link active" aria-current="page" to="/Cart">
                 Cart
               </Link>
             </li>
@@ -42,24 +48,22 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link
+            <li className="nav-item dropdown" onClick={toggleDropdown}>
+              <button
                 className="nav-link dropdown-toggle"
-                to="profile.html"
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                aria-expanded={isDropdownOpen}
               >
                 <img src="user.jpg" alt="Profile" className="profile-image rounded-circle" width="40" height="40" />
-              </Link>
-              <ul className="dropdown-menu dropdown-menu-end">
-                <li>
+              </button>
+              <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? 'show' : ''}`}>
+               <li>
                   <Link className="dropdown-item" to="/Profile">
                     Profile Details
                   </Link>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
+                  <hr className="dropdown-divider" /> 
                 </li>
                 <li>
                   <Link className="dropdown-item" to="#">

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const ProductModal = ({ product, closeModal, isOpen }) => {
     useEffect(() => {
         if (isOpen) {
-            // Trigger modal display (Bootstrap method)
+            // Trigger modal display (Bootstrap v5 method)
             const modalElement = document.getElementById(`productModal${product.id}`);
             const bootstrapModal = new window.bootstrap.Modal(modalElement);
             bootstrapModal.show();
@@ -16,7 +16,7 @@ const ProductModal = ({ product, closeModal, isOpen }) => {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h5 className="modal-title" id={`productModal${product.id}Label`}>{product.name} Details</h5>
-                        <button type="button" className="btn-close" onClick={closeModal} aria-label="Close"></button>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={closeModal}></button>
                     </div>
                     <div className="modal-body">
                         <div className="row">
@@ -56,7 +56,7 @@ const ProductModal = ({ product, closeModal, isOpen }) => {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" onClick={closeModal}>Close</button>
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModal}>Close</button>
                     </div>
                 </div>
             </div>

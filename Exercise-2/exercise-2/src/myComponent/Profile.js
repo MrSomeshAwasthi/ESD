@@ -6,10 +6,15 @@ const Profile = () => {
 
   useEffect(() => {
     // Fetch data from the external JSON file
-    fetch('path/to/Profile.json')
-      .then(response => response.json())
+    fetch('/Profile.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => setRecentOrdersData(data))
-      .catch(error => console.error('Error fetching recent orders data:', error));
+      .catch(error => console.error('Error fetching recent orders data:', error.message));
   }, []);
 
   return (

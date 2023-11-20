@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Hoodie 1",
+      "price": 2500,
+      "quantity": 2,
+      "image": "https://m.media-amazon.com/images/I/618F2QyUUEL._SX569_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Hoodie 2",
+      "price": 3500,
+      "quantity": 1,
+      "image": "https://m.media-amazon.com/images/I/61vQYGLUnZL._SX466_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Hoodie 3",
+      "price": 11000,
+      "quantity": 3,
+      "image": "https://m.media-amazon.com/images/I/61Cb9iX+toL._AC_UL480_FMwebp_QL65_.jpg"
+    }
+]  
