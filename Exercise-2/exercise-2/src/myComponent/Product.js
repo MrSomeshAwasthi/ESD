@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProductModal from './ProductModal';
 
 const Product = ({ productsData }) => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
+
   return (
     <main className="container">
       <div className="row">
@@ -26,8 +37,7 @@ const Product = ({ productsData }) => {
                 <p className="card-text">Price: Rs.{product.price}</p>
                 <button
                   className="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target={`#productModal${product.id}`}
+                  onClick={() => openModal(product)}
                 >
                   View Details
                 </button>
@@ -36,6 +46,13 @@ const Product = ({ productsData }) => {
           </div>
         ))}
       </div>
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          closeModal={closeModal}
+          isOpen={!!selectedProduct}
+        />
+      )}
     </main>
   );
 };
