@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import ProfileData from './Profile.json';
 
-const Profile = () => {
+const ProfileComponent = () => {
   const [recentOrdersData, setRecentOrdersData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the external JSON file
-    fetch('/Profile.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(data => setRecentOrdersData(data))
-      .catch(error => console.error('Error fetching recent orders data:', error.message));
+    // Set data from the imported JSON file
+    setRecentOrdersData(ProfileData);
   }, []);
 
   return (
@@ -94,4 +86,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ProfileComponent;
