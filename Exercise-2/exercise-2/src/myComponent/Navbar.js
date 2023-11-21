@@ -56,7 +56,7 @@ export default function Navbar() {
               >
                 <img src="user.jpg" alt="Profile" className="profile-image rounded-circle" width="40" height="40" />
               </button>
-              <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? 'show' : ''}`}>
+              <ul className={`dropdown-menu dropdown-menu-end ${isDropdownOpen ? 'show' : ''} dd-menu`}>
                <li>
                   <Link className="dropdown-item" to="/Profile">
                     Profile Details
