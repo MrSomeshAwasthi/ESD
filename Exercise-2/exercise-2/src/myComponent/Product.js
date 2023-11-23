@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ProductModal from './ProductModal';
 
 const Product = ({ productsData }) => {
+
+  console.log(productsData)
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const openModal = (product) => {
@@ -12,8 +14,11 @@ const Product = ({ productsData }) => {
     setSelectedProduct(null);
   };
 
+  
   return (
+    
     <main className="container">
+      {productsData[0]=="Loading"?<div>loading</div>:
       <div className="row">
         {productsData.map((product) => (
           <div key={product.id} className="col-md-4 mb-4">
@@ -46,6 +51,7 @@ const Product = ({ productsData }) => {
           </div>
         ))}
       </div>
+      }
       {selectedProduct && (
         <ProductModal
           product={selectedProduct}
