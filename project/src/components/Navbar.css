@@ -1,0 +1,14 @@
+body{
+    background-color:  #FCE38A;
+    border-radius: 20px;
+}
+.navbar {
+    background-color: #F38181; 
+}
+
+.container {
+    margin-top: 20px; 
+}
+.dd-menu{
+    right: 10px;
+}
