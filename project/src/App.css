@@ -1,3 +1,14 @@
+body {
+  background: #fce38a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fce38a 0%, #eaffd0 50%, #95e1d3 100%); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fce38a 0%, #eaffd0 50%, #95e1d3 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +25,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: #fce38a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fce38a 0%, #eaffd0 50%, #95e1d3 100%); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fce38a 0%, #eaffd0 50%, #95e1d3 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +39,59 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.login-container {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: #ff3333;
+  margin-top: 8px;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

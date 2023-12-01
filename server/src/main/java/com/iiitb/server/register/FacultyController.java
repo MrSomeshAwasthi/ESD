@@ -23,26 +23,26 @@ public class FacultyController {
     @Autowired
     private HttpSession session;
 
-    @PostMapping("/registerTA")
-    public ResponseEntity<String> registerStudentAsTa(
-            @RequestParam int studentId,
-            @RequestParam int courseId
-    ) {
-        try {
-            // Get authenticated faculty from the session
-            Employees authenticatedFaculty = (Employees) session.getAttribute("authenticatedUser");
+        @PostMapping("/registerTA")
+        public ResponseEntity<String> registerStudentAsTa(
+                @RequestParam int studentId,
+                @RequestParam int courseId
+        ) {
+            try {
+                // Get authenticated faculty from the session
+                Employees authenticatedFaculty = (Employees) session.getAttribute("authenticatedUser");
 
-            // Check if the faculty is authenticated
-            if (authenticatedFaculty == null) {
-                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed");
+                // Check if the faculty is authenticated
+                if (authenticatedFaculty == null) {
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed");
+                }
+
+                taRegistrationService.registerStudentAsTa(authenticatedFaculty, studentId, courseId);
+                return ResponseEntity.ok("TA Registration Successful");
+            } catch (RuntimeException e) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
             }
-
-            taRegistrationService.registerStudentAsTa(authenticatedFaculty, studentId, courseId);
-            return ResponseEntity.ok("TA Registration Successful");
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
-    }
 
     @PostMapping("/allocateTA")
     public ResponseEntity<String> allocateTaToCourse(

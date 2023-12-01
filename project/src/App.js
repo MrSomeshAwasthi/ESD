@@ -1,24 +1,17 @@
 import './App.css';
 import Login from './components/Login';
-import React, { useState } from 'react';
-// import Navbar from './Components/Navbar';
-// import Home from './Components/Home';
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from './components/Register';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Navbar from './components/Navbar';
 
-const App = () => {
-  const [isLoggedIn, setLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setLoggedIn(true);
-  };
+function App() {
   return (
-    <>
-        {isLoggedIn ? (
-          <p>Welcome! You are logged in.</p>
-        ) : (
-          <Login onLogin={handleLogin} />
-        )}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<div> <Register /></div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
